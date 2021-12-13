@@ -4,7 +4,7 @@ const peopleAmt = document.querySelector('#people')
 const names = document.querySelector('#name')
 const email = document.querySelector('#email')
 const reservationBtn = document.querySelector('.reservation')
-peopleAmt.textContent = ""
+peopleAmt.textContent = 0
 let num = peopleAmt.textContent
 
 const validateNameAndEmail = ()=> { 
@@ -19,7 +19,7 @@ if ((names.value == "") || (email.value == "")) {
 
 const increment = ()=> { num ++
     if (num === 0){
-       return  peopleAmt.textContent = ""
+       return  peopleAmt.textContent = `${num} person`
     }   else if (num === 1) {
         return peopleAmt.textContent = `${num} person`
     }  else if (num >= 2) {
@@ -31,7 +31,7 @@ const decrement = ()=> {
     if (num < 1){}  else { 
         num --
         if (num === 0){
-            return  peopleAmt.textContent = ""
+            return  peopleAmt.textContent = `${num} person`
          }   else if (num === 1) {
              return peopleAmt.textContent = `${num} person`
          }  else if (num > 2) {
